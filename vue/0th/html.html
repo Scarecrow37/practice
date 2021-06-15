@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{title}}</p>
+    <ul>
+        <li v-for="(name, index) in names">{{index}}:{{name}}</li>
+    </ul>
+    <div class="bool" v-show="bool">참입니다.</div>
+    <div class="aaa" :class="bcd"> 클래스 예제</div>
+    <a v-bind:href="abc">앵커 태그</a>
+    <button v-on:click="abc = 'https://google.com'">버튼</button>
+    <div v-on:[event]="changeColor" v-bind:style="style">이런 바보</div>
+    <button v-on:click="changeEvent">이벤트 바꾸기</button>
+    <input v-model="title">
+</div>
+
+<div id="component">
+    <my-header title="메롱"></my-header>
+</div>
+
+</body>
+</html>
+
+<!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script src="js.js" type="text/javascript" rel="script"></script>
